@@ -4,7 +4,7 @@ import java.awt.Button;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener; // ¹öÆ° ´­·¶À»¶§ ´ÙÀ½ ÆäÀÌÁö·Î ÀüÈ¯µÇ´Â ±â´É³ÖÀ»¶§ »ç¿ë
+import java.awt.event.ActionListener; // ë²„íŠ¼ ëˆŒë €ì„ë•Œ ë‹¤ìŒ í˜ì´ì§€ë¡œ ì „í™˜ë˜ëŠ” ê¸°ëŠ¥ë„£ì„ë•Œ ì‚¬ìš©
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -31,7 +31,8 @@ public class ParkingSystem2 {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		System.out.println("¿Í¿ì");
+		System.out.println("ì™€ìš°");
+		System.out.println("êµ¿");
 		EventQueue.invokeLater(new Runnable() {
 
 			public void run() {
@@ -58,14 +59,14 @@ public class ParkingSystem2 {
 	private void initialize() {
 
 		frame = new JFrame();
-		frame.setTitle("ParkingSystem"); // È­¸éÃ¢ ÀÌ¸§ ÀÓÀÇ·Î ¼³Á¤ °¡´É
-		frame.setBounds(100, 100, 484, 352); // È­¸é Å©±â ¼³Á¤
-		frame.setLocationRelativeTo(null); // È­¸éÀÌ Áß¾Ó¿¡¼­ ¶ßµµ·Ï ¼³Á¤ÇØÁÖ´Â ¸Ş¼Òµå
-		frame.setResizable(false); // È­¸éÅ©±â ¸¶¿ì½º·Î È®´ëÃà¼Ò ¸øÇÏµµ·Ï °íÁ¤½ÃÅ°±â
+		frame.setTitle("ParkingSystem"); // í™”ë©´ì°½ ì´ë¦„ ì„ì˜ë¡œ ì„¤ì • ê°€ëŠ¥
+		frame.setBounds(100, 100, 484, 352); // í™”ë©´ í¬ê¸° ì„¤ì •
+		frame.setLocationRelativeTo(null); // í™”ë©´ì´ ì¤‘ì•™ì—ì„œ ëœ¨ë„ë¡ ì„¤ì •í•´ì£¼ëŠ” ë©”ì†Œë“œ
+		frame.setResizable(false); // í™”ë©´í¬ê¸° ë§ˆìš°ìŠ¤ë¡œ í™•ëŒ€ì¶•ì†Œ ëª»í•˜ë„ë¡ ê³ ì •ì‹œí‚¤ê¸°
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 
-		// ºñÈ¸¿ø/Àå¾ÖÀÎ ÆäÀÌÁö ½ÃÀÛ
+		// ë¹„íšŒì›/ì¥ì• ì¸ í˜ì´ì§€ ì‹œì‘
 		JPanel NonMemberPage = new JPanel();
 		NonMemberPage.setBounds(0, 0, 478, 324);
 		frame.getContentPane().add(NonMemberPage);
@@ -101,7 +102,7 @@ public class ParkingSystem2 {
 		back3.setBounds(240, 105, 67, 23);
 		NonMemberPage.add(back3);
 
-		// È¸¿ø°¡ÀÔ ÆäÀÌÁö ½ÃÀÛ
+		// íšŒì›ê°€ì… í˜ì´ì§€ ì‹œì‘
 		JPanel EnrollPage = new JPanel();
 		EnrollPage.setBounds(0, 0, 478, 324);
 		frame.getContentPane().add(EnrollPage);
@@ -151,7 +152,7 @@ public class ParkingSystem2 {
 		back2.setBounds(223, 132, 83, 23);
 		EnrollPage.add(back2);
 
-		// ·Î±×ÀÎ ÆäÀÌÁö ½ÃÀÛ
+		// ë¡œê·¸ì¸ í˜ì´ì§€ ì‹œì‘
 		JPanel LoginPage = new JPanel();
 		LoginPage.setBounds(0, 0, 478, 324);
 		frame.getContentPane().add(LoginPage);
@@ -191,42 +192,42 @@ public class ParkingSystem2 {
 		btnBack.setBounds(322, 34, 92, 23);
 		LoginPage.add(btnBack);
 
-		// Ã¹ ÁÖÂ÷È­¸é ÆäÀÌÁö ½ÃÀÛ
+		// ì²« ì£¼ì°¨í™”ë©´ í˜ì´ì§€ ì‹œì‘
 		JPanel StartPage = new JPanel();
 		StartPage.setBounds(0, 0, 478, 324);
 		frame.getContentPane().add(StartPage);
 		StartPage.setLayout(null);
 
-		// ¿©±âºÎÅÍ Ã¹È­¸é 1~21¹ø ÁÖÂ÷¹øÈ£ ¹öÆ°
-		Button[] button = new Button[21]; // ¹öÆ°ÀÌ¶ó´Â Å¸ÀÔÀÇ 21ÀÚ¸®Â¥¸® ¹è¿­ »ı¼º
+		// ì—¬ê¸°ë¶€í„° ì²«í™”ë©´ 1~21ë²ˆ ì£¼ì°¨ë²ˆí˜¸ ë²„íŠ¼
+		Button[] button = new Button[21]; // ë²„íŠ¼ì´ë¼ëŠ” íƒ€ì…ì˜ 21ìë¦¬ì§œë¦¬ ë°°ì—´ ìƒì„±
 		for (int i = 0; i < button.length; i++) {
-			button[i] = new Button(Integer.toString(i + 1)); // ¹è¿­¾È¿¡ ¹öÆ°°´Ã¼¸¦ »ı¼ºÇØ¼­ ³Ö¾îÁØ´Ù
+			button[i] = new Button(Integer.toString(i + 1)); // ë°°ì—´ì•ˆì— ë²„íŠ¼ê°ì²´ë¥¼ ìƒì„±í•´ì„œ ë„£ì–´ì¤€ë‹¤
 		}
 
 		int count = 0;
 		int init_value2 = 30;
 
-		for (int j = 0; j < 3; j++) { // 0,1,2 ÀÏ´Ü 0¹øÂ° ÁÙÀÏ¶§
+		for (int j = 0; j < 3; j++) { // 0,1,2 ì¼ë‹¨ 0ë²ˆì§¸ ì¤„ì¼ë•Œ
 			int init_value1 = 30;
-			for (int i = 0; i < 7; i++) { // 7¹ø ¹İº¹
-				button[count].setBounds(init_value1, init_value2, 45, 68); // 45,68Àº ¹öÆ°ÀÇ Å©±â => °íÁ¤
-				init_value1 += 60; // xÁÂÇ¥°ª +60¾¿´õÇØÁÖ¸é¼­ ÀúÀå => ¹İº¹ÇØ¼­ ¹öÆ°ÂïÀ»¶§¸¶´Ù ¿·À¸·Î +60¸¸Å­ ÀÌµ¿ÇÏ¸é¼­ ÂïÀ½
-				StartPage.add(button[count]); // ¹öÆ°À» Ã¢¿¡¼­ º¸¿©Áö°ÔÇÔ
-				button[count].setBackground(Color.GREEN); // »ö±òÀº ±×¸°
+			for (int i = 0; i < 7; i++) { // 7ë²ˆ ë°˜ë³µ
+				button[count].setBounds(init_value1, init_value2, 45, 68); // 45,68ì€ ë²„íŠ¼ì˜ í¬ê¸° => ê³ ì •
+				init_value1 += 60; // xì¢Œí‘œê°’ +60ì”©ë”í•´ì£¼ë©´ì„œ ì €ì¥ => ë°˜ë³µí•´ì„œ ë²„íŠ¼ì°ì„ë•Œë§ˆë‹¤ ì˜†ìœ¼ë¡œ +60ë§Œí¼ ì´ë™í•˜ë©´ì„œ ì°ìŒ
+				StartPage.add(button[count]); // ë²„íŠ¼ì„ ì°½ì—ì„œ ë³´ì—¬ì§€ê²Œí•¨
+				button[count].setBackground(Color.GREEN); // ìƒ‰ê¹”ì€ ê·¸ë¦°
 				count++;
 			}
-			init_value2 += 90; // i=7ÀÏ¶§ ¾ÈÂÊ for¹® ºüÁ®³ª¿À°í yÁÂÇ¥°ª +90ÇØ¼­ ´ÙÀ½ÁÙºÎÅÍ Âï¾îÁÖ±â
+			init_value2 += 90; // i=7ì¼ë•Œ ì•ˆìª½ forë¬¸ ë¹ ì ¸ë‚˜ì˜¤ê³  yì¢Œí‘œê°’ +90í•´ì„œ ë‹¤ìŒì¤„ë¶€í„° ì°ì–´ì£¼ê¸°
 		}
 
-		// ÁÖÂ÷¹øÈ£ ¹öÆ° Å¬¸¯½Ã ·Î±×ÀÎÈ­¸éÀ¸·Î ÀüÈ¯µÇ´Â°Í ¹İº¹
+		// ì£¼ì°¨ë²ˆí˜¸ ë²„íŠ¼ í´ë¦­ì‹œ ë¡œê·¸ì¸í™”ë©´ìœ¼ë¡œ ì „í™˜ë˜ëŠ”ê²ƒ ë°˜ë³µ
 		for (int i = 0; i < 21; i++) {
 			LoginPage.setVisible(false);
-			button[i].addActionListener(new ActionListener() { // i=0ÀÏ¶§ = 1¹øÂ° ¹öÆ°Å¬¸¯½Ã ¹Ø¿¡²¨ ½ÇÇà
+			button[i].addActionListener(new ActionListener() { // i=0ì¼ë•Œ = 1ë²ˆì§¸ ë²„íŠ¼í´ë¦­ì‹œ ë°‘ì—êº¼ ì‹¤í–‰
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					String str = e.getActionCommand(); // Å¬¸¯ÇÑ¹öÆ°ÀÇ ¼ıÀÚ(1)¸¦ ¸®ÅÏ°ªÀ¸·Î ¹Ş¾Æ¿À´Â ¸Ş¼Òµå.. ¹Ş¾Æ¿Í¼­ strº¯¼ö¿¡ ÀúÀå
-					tmp = Integer.parseInt(str) - 1; // ½ºÆ®¸µÅ¸ÀÔ "1"¸®ÅÏ°ªÀ» int·Î º¯È¯.. ÀÓ½Ã¼±¾ğÇÑ tmp¶ó´Â º¯¼ö¿¡ ÀúÀå tmp=1-1=0
+					String str = e.getActionCommand(); // í´ë¦­í•œë²„íŠ¼ì˜ ìˆ«ì(1)ë¥¼ ë¦¬í„´ê°’ìœ¼ë¡œ ë°›ì•„ì˜¤ëŠ” ë©”ì†Œë“œ.. ë°›ì•„ì™€ì„œ strë³€ìˆ˜ì— ì €ì¥
+					tmp = Integer.parseInt(str) - 1; // ìŠ¤íŠ¸ë§íƒ€ì… "1"ë¦¬í„´ê°’ì„ intë¡œ ë³€í™˜.. ì„ì‹œì„ ì–¸í•œ tmpë¼ëŠ” ë³€ìˆ˜ì— ì €ì¥ tmp=1-1=0
 					LoginPage.setVisible(true);
 					StartPage.setVisible(false);
 
@@ -235,23 +236,23 @@ public class ParkingSystem2 {
 			});
 		}
 
-		// ÀÔÂ÷ ¹öÆ° Å¬¸¯½Ã
+		// ì…ì°¨ ë²„íŠ¼ í´ë¦­ì‹œ
 		EnrollPage.setVisible(false);
 		StartPage.setVisible(false);
 
-		btnCarIn.addActionListener(new ActionListener() { // ÀÔÂ÷¹öÆ° Å¬¸¯½Ã ¾Æ·¡ ½ÇÇà
+		btnCarIn.addActionListener(new ActionListener() { // ì…ì°¨ë²„íŠ¼ í´ë¦­ì‹œ ì•„ë˜ ì‹¤í–‰
 
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				button[tmp].setBackground(Color.RED); // tmp=0ÀÌ¸é ¹öÆ°Àº 1¹øÂ°¹öÆ°.. ±×°É ·¹µå·Î º¯È¯
-				StartPage.setVisible(true); // È­¸éÀüÈ¯ÇÏ¸é ·¹µå·Î º¯È¯µÈ 1¹ø¹öÆ°ÀÌ º¸ÀÌ´Â Ã¢ÀÌ µå·¯³²
-				LoginPage.setVisible(false); // ·Î±×ÀÎÃ¢Àº ´Ù½Ã ¼û±è
+				button[tmp].setBackground(Color.RED); // tmp=0ì´ë©´ ë²„íŠ¼ì€ 1ë²ˆì§¸ë²„íŠ¼.. ê·¸ê±¸ ë ˆë“œë¡œ ë³€í™˜
+				StartPage.setVisible(true); // í™”ë©´ì „í™˜í•˜ë©´ ë ˆë“œë¡œ ë³€í™˜ëœ 1ë²ˆë²„íŠ¼ì´ ë³´ì´ëŠ” ì°½ì´ ë“œëŸ¬ë‚¨
+				LoginPage.setVisible(false); // ë¡œê·¸ì¸ì°½ì€ ë‹¤ì‹œ ìˆ¨ê¹€
 
 			}
 
 		});
 
-		// ·Î±×ÀÎÈ­¸é¿¡¼­ µÚ·Î¹öÆ° Å¬¸¯½Ã ±»ÀÌ ¹İº¹¹®¾È½áµµµÇ°í ±×³É È­¸éÀüÈ¯¸¸ ÇÏµµ·Ï..
+		// ë¡œê·¸ì¸í™”ë©´ì—ì„œ ë’¤ë¡œë²„íŠ¼ í´ë¦­ì‹œ êµ³ì´ ë°˜ë³µë¬¸ì•ˆì¨ë„ë˜ê³  ê·¸ëƒ¥ í™”ë©´ì „í™˜ë§Œ í•˜ë„ë¡..
 		btnBack.addActionListener(new ActionListener() {
 
 			@Override
@@ -263,7 +264,7 @@ public class ParkingSystem2 {
 
 		});
 
-		// ·Î±×ÀÎÆäÀÌÁö¿¡¼­È¸¿ø°¡ÀÔ¹öÆ° Å¬¸¯½Ã È¸¿ø°¡ÀÔÃ¢ÀÌ ¶ß°ÔÇÏ´Â ±â´É
+		// ë¡œê·¸ì¸í˜ì´ì§€ì—ì„œíšŒì›ê°€ì…ë²„íŠ¼ í´ë¦­ì‹œ íšŒì›ê°€ì…ì°½ì´ ëœ¨ê²Œí•˜ëŠ” ê¸°ëŠ¥
 		EnrollPage.setVisible(false);
 		StartPage.setVisible(false);
 
@@ -278,7 +279,7 @@ public class ParkingSystem2 {
 
 		});
 
-		// ÀÌÁ¦ ´Ù½Ã È¸¿ø°¡ÀÔÆäÀÌÁö¿¡¼­ µÚ·Î°¡±â ¹öÆ° ´­·¶À»¶§ ·Î±×ÀÎ ÆäÀÌÁö·Î µ¹¾Æ°¡´Â ±â´É ±¸Çö
+		// ì´ì œ ë‹¤ì‹œ íšŒì›ê°€ì…í˜ì´ì§€ì—ì„œ ë’¤ë¡œê°€ê¸° ë²„íŠ¼ ëˆŒë €ì„ë•Œ ë¡œê·¸ì¸ í˜ì´ì§€ë¡œ ëŒì•„ê°€ëŠ” ê¸°ëŠ¥ êµ¬í˜„
 		back2.addActionListener(new ActionListener() {
 
 			@Override
@@ -290,7 +291,7 @@ public class ParkingSystem2 {
 
 		});
 
-		// ·Î±×ÀÎÆäÀÌÁö¿¡¼­ ºñÈ¸¿ø/Àå¾ÖÀÎ ¹öÆ° Å¬¸¯½Ã ºñÈ¸¿ø/Àå¾ÖÀÎ ÆäÀÌÁö°¡ ¶ß°ÔÇÏ´Â ±â´É
+		// ë¡œê·¸ì¸í˜ì´ì§€ì—ì„œ ë¹„íšŒì›/ì¥ì• ì¸ ë²„íŠ¼ í´ë¦­ì‹œ ë¹„íšŒì›/ì¥ì• ì¸ í˜ì´ì§€ê°€ ëœ¨ê²Œí•˜ëŠ” ê¸°ëŠ¥
 		LoginPage.setVisible(false);
 		EnrollPage.setVisible(false);
 		NonMemberPage.setVisible(false);
@@ -307,7 +308,7 @@ public class ParkingSystem2 {
 
 		});
 
-		// ºñÈ¸¿ø/Àå¾ÖÀÎ ÆäÀÌÁö¿¡¼­ µÚ·Î°¡±â ¹öÆ° ´­·¶À»¶§ ±× ÀüÈ­¸éÀÎ ·Î±×ÀÎ È­¸éÀ¸·Î µ¹¾Æ°¡´Â ±â´É
+		// ë¹„íšŒì›/ì¥ì• ì¸ í˜ì´ì§€ì—ì„œ ë’¤ë¡œê°€ê¸° ë²„íŠ¼ ëˆŒë €ì„ë•Œ ê·¸ ì „í™”ë©´ì¸ ë¡œê·¸ì¸ í™”ë©´ìœ¼ë¡œ ëŒì•„ê°€ëŠ” ê¸°ëŠ¥
 		back3.addActionListener(new ActionListener() {
 
 			@Override
