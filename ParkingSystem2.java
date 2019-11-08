@@ -31,6 +31,7 @@ public class ParkingSystem2 {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		System.out.println("¿Í¿ì");
 		EventQueue.invokeLater(new Runnable() {
 
 			public void run() {
@@ -319,4 +320,4 @@ public class ParkingSystem2 {
 		});
 
 	}
-}//sdsdsdd
+}
